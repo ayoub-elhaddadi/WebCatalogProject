@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+ 
+<persistence-unit name="managerBoutique" transaction-type="JTA">
+	 <jta-data-source>java:/WebCatalogJNDI</jta-data-source>
+	 <class>fr.eilco.model.Categorie</class>
+	 <class>fr.eilco.model.Produit</class>
+	 <class>fr.eilco.model.Client</class>
+	 <class>fr.eilco.model.Commande</class>
+	 <class>fr.eilco.model.ProduitCommande</class>
+	 
+	 <properties>
+	 	<property name="hibernate.hbm2ddl.auto" value="update" />
+	 	<property value="true" name="hibernate.show_sql"/>
+	 </properties>
+</persistence-unit>
+
+</persistence>
